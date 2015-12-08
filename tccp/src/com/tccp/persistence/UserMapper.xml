@@ -34,7 +34,7 @@
 	</select>
 	
 	<select id="findAll" resultType="testUser">
-		select username ,  from user
+		select username username,age age from user
 	</select>
 	
 	<select id="findAll2" resultType="testUser">

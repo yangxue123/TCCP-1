@@ -74,7 +74,7 @@ public class UserTest {
 	
 	@Test
 	public void testDelete(){
-		userMapper.delete(4);
+		userMapper.delete(6);
 	}
 	
 	@Test
