@@ -10,30 +10,10 @@ Target Server Type    : MYSQL
 Target Server Version : 50627
 File Encoding         : 65001
 
-Date: 2015-12-06 19:30:26
+Date: 2015-12-08 19:03:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for tccp_test
--- ----------------------------
-DROP TABLE IF EXISTS `tccp_test`;
-CREATE TABLE `tccp_test` (
-  `user_id` int(10) NOT NULL AUTO_INCREMENT,
-  `username` varchar(20) NOT NULL,
-  `age` varchar(20) NOT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of tccp_test
--- ----------------------------
-INSERT INTO `tccp_test` VALUES ('1', 'tccp', '1');
-INSERT INTO `tccp_test` VALUES ('2', '张三', '18');
-INSERT INTO `tccp_test` VALUES ('3', '李四', '22');
-INSERT INTO `tccp_test` VALUES ('5', '钱6', '24');
-INSERT INTO `tccp_test` VALUES ('6', '王五', '33');
 
 -- ----------------------------
 -- Table structure for tccp_update_info
@@ -71,15 +51,36 @@ CREATE TABLE `tccp_user` (
   `github` varchar(50) DEFAULT NULL,
   `grade` varchar(50) NOT NULL,
   `major` varchar(50) NOT NULL,
-  `birthday` datetime DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
   `workplace` varchar(50) DEFAULT NULL,
   `job` varchar(50) DEFAULT NULL,
   `priority` int(10) NOT NULL DEFAULT '2',
-  `status` int(10) NOT NULL DEFAULT '0',
   `image` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tccp_user
 -- ----------------------------
+INSERT INTO `tccp_user` VALUES ('2', 'testname', '123456', '0', '18829291491', '352862566@qq.com', '352862566', null, null, '大三', '计科', '1994-09-10', null, null, '2', null);
+INSERT INTO `tccp_user` VALUES ('3', 'testname2', '123456', '0', '18829291923', '213312371@qq.com', '1233452133', null, null, '大三', '软件', '1993-09-11', null, null, '2', null);
+
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `user_id` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `age` varchar(20) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', 'tccp', '1');
+INSERT INTO `user` VALUES ('2', '张三', '18');
+INSERT INTO `user` VALUES ('3', '李四', '22');
+INSERT INTO `user` VALUES ('5', '钱六', '24');
+INSERT INTO `user` VALUES ('6', '王五', '33');

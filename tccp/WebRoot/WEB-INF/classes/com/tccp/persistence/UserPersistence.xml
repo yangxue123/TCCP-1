@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	namespace：必须与对应的接口全类名一致
+	id:必须与对应接口的某个对应的方法名一致
+	
+ -->
+ <mapper namespace="com.tccp.persistence.UserPersistence">
+ 
+<!-- **************************************************************************** -->
+<!-- **************************************************************************** -->
+	<select id="selectByUP" parameterType="com.tccp.entity.User" resultType="com.tccp.entity.User">
+		select user_id user_id,username username, priority,priority from tccp_user where username=#{username} and 
+		password=#{password}
+	</select>
+
+		<select id="selectAllUser" resultType="com.tccp.entity.User">
+		select * from tccp_user
+	</select>
+<!-- **************************************************************************** -->
+<!-- **************************************************************************** -->
+ </mapper>
