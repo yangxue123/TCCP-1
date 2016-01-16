@@ -24,18 +24,49 @@ public class UserServiceImpl implements UserService {
 	@Resource
 	private UserPersistence userPersistence;
 
-	
-	public User userLogin(User user){
-		User user2 = userPersistence.selectByUP(user);
-		if(user2!=null){
-			System.out.println(user2.getUser_id() + user2.getUsername() + user2.getPriority());
-			return user2;
-		}
-		return null;
-		
+	//用户登录
+	public User userLogin(User user)
+	{
+		return userPersistence.selectByUP(user);
+	}
+	//查看个人信息
+	public User getUserInformation(int user_id)
+	{
+		return userPersistence.selectById(user_id);
+	}
+	//修改用户信息
+	public boolean updateUserInfo(User user)
+	{
+		return userPersistence.updateUserInfo(user);
+	}
+	//查询密码
+	public String selectPd(int user_id)
+	{
+		return userPersistence.selectPd(user_id);
+	}
+	//修改密码
+	public boolean updatePd(User user)
+	{
+		return userPersistence.updatePd(user);
+	}
+	//修改头像
+	public boolean updateImage(User user)
+	{
+		return userPersistence.updateImage(user);
 	}
 	
-	//测试方法*********************************************************************
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//**************************************测试方法*********************************************************************
+	//**************************************测试方法*********************************************************************
+	//**************************************测试方法*********************************************************************
 	public boolean delete(int id) {
 		
 		return mapper.delete(id);
@@ -62,7 +93,7 @@ public class UserServiceImpl implements UserService {
 
 		return mapper.update(user);
 	}
-	//测试方法************************************************************************
-	
-
+	//**************************************测试方法************************************************************************
+	//**************************************测试方法*********************************************************************
+	//**************************************测试方法*********************************************************************
 }

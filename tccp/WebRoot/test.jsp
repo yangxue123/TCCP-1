@@ -10,15 +10,45 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>测试首页</title>
+    <style type="text/css">
+    .set{
+    	color:red;
+    }
+    </style>
 	
   </head>
   
-  <body>
-   	<a href="<%=basePath%>user/getAllUser">首页，点击进入tccp测试页</a>
+  <body style="text-align:center">
+  	<br>
+  	<br>
+  	<br>
+  	<br>
+  	<br>
+  	<br>
+  	<br>
+  	<br>
+  	<h1>空链接页面</h1>
+  	
+  	<hr>
+  	<a href="<%=basePath%>user/toUserLogin"><span class="set">请点击：tccp首页（默认登录页面，如果已登录，则返回登录后页面，保持十五分钟！）</span></a>   	
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
    	<br>
    	<hr>
-   	<a href="<%=basePath%>user/getAllUserTest">测试JSON</a>
-   	<hr>
-   	<a href="<%=basePath%>user/toUserLogin">测试登录</a>
+   		<a href="<%=basePath%>user/getAllUser">tccp框架测试页</a>
+   		<a href="<%=basePath%>user/getAllUserTest">测试JSON</a>
+ 	
+  	
   </body>
 </html>
