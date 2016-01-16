@@ -1,10 +1,9 @@
 package com.tccp.entity;
 
 /**
- * 用户
+ * 框架测试用户表
  * @author tccp项目组
- *
- */
+ **/
 public class testUser {
 
 	private int user_id;
@@ -51,5 +50,4 @@ public class testUser {
 		return "User [user_id=" + user_id + ", username=" + username + 
 				", age=" + age + "]";
 	}
-		
 }

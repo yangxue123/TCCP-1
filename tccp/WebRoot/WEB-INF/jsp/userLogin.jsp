@@ -21,9 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-  <div class="login_page_background">
-</div>
+  <body class="login_page_background">
 
 <div id="login_frame">
 	<div class="TC"><span class="span">XUPT ThoughtCoding</span></div>

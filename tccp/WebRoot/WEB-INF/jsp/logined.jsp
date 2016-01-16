@@ -37,9 +37,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="navigation">
 		<ul>
 		 	<li>欢迎您！</li>
-			<li><a href="">${User.username}</a></li>
-			<li><a href="">修改密码</a></li>
-			<li><a href="">设置</a></li>
+			<li><a href="<%=basePath%>user/getUserInformation">${User.username}</a></li>
+			<li><a href="<%=basePath%>user/getUserInformation">修改密码</a></li>
+			<li><a href="<%=basePath%>other/toUploadFileView">文件上传</a></li>
 			<li><a href="<%=basePath%>/user/userLoginOut">退出</a></li>
 		</ul>
 	</div>
